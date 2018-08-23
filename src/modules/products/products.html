@@ -4,7 +4,8 @@
             <li class="nav-item dropdown dropleft">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-bag fa-2x"></i></a>
                 <div class="dropdown-menu">
-					<h5 class="text-center">Cart</h5>
+					<h6 class="text-center">Cart</h6>
+					<hr>
 					<div class="text-center" ng-if="!cartItems.length">No items in cart :C</div>
                     <div class="cart-item" ng-repeat="item in cartItems">
 						<img width="20" src="{{item.image}}" alt="">	
