@@ -1,0 +1,8 @@
+.products{
+	background: black;
+	&__item{
+		&:hover{
+			background: #eee;
+		}
+	}
+}
