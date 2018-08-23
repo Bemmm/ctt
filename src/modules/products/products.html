@@ -1,9 +1,29 @@
-<div class="container products">
-<div class="row">
-	<div class="col-md-4 text-center mt-5 products__item" ng-repeat="item in products">
-		<img style="width:50%" class="m-2" src="{{item.image}}" alt="">
-		<h5>{{item.name}}</h5>
-		<p>{{item.subtitle}}</p>
+<nav id="navbar-example2" class="ctt-navbar navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">AwesomeMeal</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item dropdown dropleft">
+                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-shopping-bag fa-2x"></i></a>
+                <div class="dropdown-menu">
+					<h5 class="text-center">Cart</h5>
+					<div class="text-center" ng-if="!cartItems.length">No items in cart :C</div>
+                    <div class="cart-item" ng-repeat="item in cartItems">
+						<img width="20" src="{{item.image}}" alt="">	
+						<p>{{item.name}}</p>
+					</div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+<div class="container products pt-5 pb-5">
+	<div class="row">
+		<div class="col-md-4 col-sm-6 col-xs-12 text-center mt-5" ng-repeat="item in products">
+			<div class="products__item">
+				<img style="width:50%" class="m-2" src="{{item.image}}" alt="">
+				<div class="products__item__title">{{item.name}}</div>
+				<div class="products__item__description">{{item.subtitle}}</div>
+				<div class="products__item__price">{{item.price}}$</div>
+				<div class="products__item__buy" ng-click="addToCart(this.item)">+</div>
+			</div>
+		</div>
 	</div>
-</div>
 </div>

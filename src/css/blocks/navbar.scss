@@ -1,0 +1,23 @@
+.ctt-navbar{
+    .nav-item{
+        &.show{
+            a{
+                background-color: rgb(140, 255, 140) !important;
+            }
+        }
+        .cart-item{
+            img{
+                float: left;
+            }
+            p{
+                font-size: 12px;
+            }
+        }
+        a{
+            color:#fff !important;
+        }
+        i{
+            color: #fff;
+        }
+    }
+}

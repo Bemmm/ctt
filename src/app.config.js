@@ -1,4 +1,6 @@
 angular.module('app')
 .constant('config', {
-	// getItems: 'our route would be here'
+	base: 'https://raw.githubusercontent.com',
+	prefix: '/Bemmm/ctt/master/',
+	getProducts: '/challange-items.json'
 });
